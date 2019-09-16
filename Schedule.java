@@ -54,8 +54,7 @@ public class Schedule {
             }       
         }
         this.totalCredits += course.getCourseCredits();
-        this.userCourses[this.courseCount] = course;
-        this.courseCount++;
+        this.userCourses[this.courseCount++] = course;        
         return "Successful enrollment \n";
     }
     
