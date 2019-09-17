@@ -49,7 +49,7 @@ public class Schedule {
                 for(int k = 0; k < course.getSessionAmount(); k++){
                     Date course2Start = course.getSession(k).getArrivalTime();
                     Date course2End = course.getSession(k).getDepartureTime();
-                   if(isOverlapping(course1Start, course1End, course2Start, course2End)) return "Schedule overlaps! \n";
+                   if(isOverlapping(course1Start, course1End, course2Start, course2End) && course.getSession(k).getDay() == userCourses[i].getSession(j).getDay()) return "Schedule overlaps! \n";
                 }
             }       
         }
